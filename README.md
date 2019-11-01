@@ -10,6 +10,14 @@ a format for loading further analysis and visualization.
 
 RMTGeneNet is offered under a GPL v2.0 license agreement.  
 
+## Citing RMTGeneNet
+Please use the following citation if RMTGeneNet has been useful to your work:
+
+> Gibson SM, Ficklin SP, Isaacson S, Luo F, Feltus FA, et al. (2013)
+> Massive-Scale Gene Co-Expression Network Construction and Robustness Testing
+> Using Random Matrix Theory. PLoS ONE 8(2): e55871.
+
+
 
 # Installation
 For installation instructions see the INSTALL.txt file.
@@ -58,14 +66,7 @@ For instructions regarding network extraction:
     rmtgnet extract --help
 
 
-# Citing RMTGeneNet
-Please use the following citation if RMTGeneNet has been useful to your work:
-
-> Gibson SM, Ficklin SP, Isaacson S, Luo F, Feltus FA, et al. (2013)
-> Massive-Scale Gene Co-Expression Network Construction and Robustness Testing
-> Using Random Matrix Theory. PLoS ONE 8(2): e55871.
-
-#Example: Construct an S. cerevisiae (yeast) Network
+# Example: Construct an S. cerevisiae (yeast) Network
 RMTGeneNet contains an example directory containing yeast data as an example. 
 This examples provides datasets and instructions for constructing
 a co-expression networking using RMTGeneNet from microarray
