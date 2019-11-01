@@ -43,27 +43,27 @@ downstream analysis or for visualization.
 Instrutions for performing each step can be obtained by executing RMTGeneNet
 with the with the --help option. For example:
 
-  rmtgnet help
+    rmtgnet help
   
 For instructions regarding similarity matrix construction:
 
-  rmtgnet similarity --help 
+    rmtgnet similarity --help 
   
 For instructions regarding thresholding:
 
-  rmtgnet threshold --help
+    rmtgnet threshold --help
   
 For instructions regarding network extraction:
 
-  rmtgnet extract --help
+    rmtgnet extract --help
 
 
 # Citing RMTGeneNet
 Please use the following citation if RMTGeneNet has been useful to your work:
 
-Gibson SM, Ficklin SP, Isaacson S, Luo F, Feltus FA, et al. (2013)
-Massive-Scale Gene Co-Expression Network Construction and Robustness Testing
-Using Random Matrix Theory. PLoS ONE 8(2): e55871.
+> Gibson SM, Ficklin SP, Isaacson S, Luo F, Feltus FA, et al. (2013)
+> Massive-Scale Gene Co-Expression Network Construction and Robustness Testing
+> Using Random Matrix Theory. PLoS ONE 8(2): e55871.
 
 #Example: Construct an S. cerevisiae (yeast) Network
 RMTGeneNet contains an example directory containing yeast data as an example. 
@@ -89,9 +89,9 @@ The first step in construction of the yeast network is to construct
 the correlation matrix.  The following commands can be executed to construct
 this matrix:
 
-  cd examples
-  ../rmtgnet similarity --ematrix yeast-s_cerevisiae1.global.RMA.nc-no-na.txt \
-    --rows 577 --cols 1535 --method sc --headers
+    cd examples
+    ../rmtgnet similarity --ematrix yeast-s_cerevisiae1.global.RMA.nc-no-na.txt \
+      --rows 577 --cols 1535 --method sc --headers
 
 The number of probesets (--rows) and samples (--cols) in the file aree 
 provided to the program as well as the Spearman (--method) as the correlation
@@ -102,8 +102,8 @@ method.  The file has a header line (--headers).
 The second step is to use Random Matrix Theory (RMT) to identify an
 appropriate threshold for the network. 
 
-  ../rmtgnet threshold --ematrix yeast-s_cerevisiae1.global.RMA.nc-no-na.txt \
-    --rows 577 --cols 1535 --method sc --headers 
+    ../rmtgnet threshold --ematrix yeast-s_cerevisiae1.global.RMA.nc-no-na.txt \
+      --rows 577 --cols 1535 --method sc --headers 
 
 
 ## Step 3: Generate additional network files
@@ -112,8 +112,8 @@ yeast-s_cerevisiae1.global.RMA.nc-no-na.sc.th.txt file that was created
 in the previous step.  We can now use that threshold to generate the final 
 network file:
 
-  ../rmtgnet extract --ematrix yeast-s_cerevisiae1.global.RMA.nc-no-na.txt \
-    --rows 577 --cols 1535 --method sc --headers --th 0.863100
+    ../rmtgnet extract --ematrix yeast-s_cerevisiae1.global.RMA.nc-no-na.txt \
+      --rows 577 --cols 1535 --method sc --headers --th 0.863100
 
 The resulting network can now be found in the file named:
 yeast-s_cerevisiae1.global.RMA.nc-no-na.sc.th0.863100.coexpnet.edges.txt
