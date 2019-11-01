@@ -1,4 +1,4 @@
-#About
+# About
 
 RMTGeneNet is an open-source software package that provides tools for
 construction of gene co-expression networks.  It supports correlation methods
@@ -11,11 +11,11 @@ a format for loading further analysis and visualization.
 RMTGeneNet is offered under a GPL v2.0 license agreement.  
 
 
-#Installation
+# Installation
 For installation instructions see the INSTALL.txt file.
 
 
-#Build a Network
+# Build a Network
 To construct a gene co-expression network using RMTGeneNet an expression
 matrix must first be constructed.  The expression matrix should be present in
 a tab-delimited file where the columns represent the experimental samples and
@@ -58,7 +58,7 @@ For instructions regarding network extraction:
   rmtgnet extract --help
 
 
-#Citing RMTGeneNet
+# Citing RMTGeneNet
 Please use the following citation if RMTGeneNet has been useful to your work:
 
 Gibson SM, Ficklin SP, Isaacson S, Luo F, Feltus FA, et al. (2013)
@@ -84,7 +84,7 @@ file. For detailed instructions about the quality control steps used, please
 see the publication:
 
 
-##Step 1: Construct correlation matrix
+## Step 1: Construct correlation matrix
 The first step in construction of the yeast network is to construct
 the correlation matrix.  The following commands can be executed to construct
 this matrix:
@@ -98,7 +98,7 @@ provided to the program as well as the Spearman (--method) as the correlation
 method.  The file has a header line (--headers).
 
 
-##Step 2: Use RMT to determine an appropriate threshold
+## Step 2: Use RMT to determine an appropriate threshold
 The second step is to use Random Matrix Theory (RMT) to identify an
 appropriate threshold for the network. 
 
@@ -106,7 +106,7 @@ appropriate threshold for the network.
     --rows 577 --cols 1535 --method sc --headers 
 
 
-##Step 3: Generate additional network files
+## Step 3: Generate additional network files
 The threshold returned from Step 2 was 0.863100. This value is reported in the
 yeast-s_cerevisiae1.global.RMA.nc-no-na.sc.th.txt file that was created
 in the previous step.  We can now use that threshold to generate the final 
